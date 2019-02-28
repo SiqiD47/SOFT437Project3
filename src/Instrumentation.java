@@ -10,7 +10,7 @@ import java.util.logging.SimpleFormatter;
 
 public class Instrumentation {
 	private Stack<Long> startTime = new Stack<Long>();
-	private Stack<Long> startTimeCopy = new Stack<Long>();
+	private long firstStartTime = 0;
 	private ArrayList<String> logContent = new ArrayList<>();
 	private static boolean activated = false;
 
@@ -27,7 +27,8 @@ public class Instrumentation {
 		if (activated) {
 			long time = System.nanoTime();
 			startTime.push(time);
-			startTimeCopy.push(time);
+			if (startTime.size() == 1)
+				firstStartTime = startTime.get(0);
 			logContent.add("STARTTIMING: " + comment + "\n");
 		}
 	}
@@ -48,7 +49,7 @@ public class Instrumentation {
 
 	public void dump(String filename) {
 		long current = System.nanoTime();
-		String s = String.format("%.3f", (float) (current - startTimeCopy.get(0)) / 1000000);
+		String s = String.format("%.3f", (float) (current - firstStartTime) / 1000000);
 		logContent.add("TOTAL TIME: " + s + " ms\n");
 
 		Logger logger = Logger.getLogger("MyLog");

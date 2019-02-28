@@ -1,42 +1,42 @@
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: main
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: populateArray()
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: populateArray() 2.986 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: populateArray() 12.659 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: bubbleSort()
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: bubbleSort() 429.503 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: bubbleSort() 487.670 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: quickSort()
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: quickSort() 133.540 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: quickSort() 134.977 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: mergeSort()
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: mergeSort() 12.031 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: mergeSort() 15.382 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: STARTTIMING: selectionSort()
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: selectionSort() 348.995 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: selectionSort() 271.293 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
+Feb 28, 2019 1:40:51 PM Instrumentation dump
 CONFIG: COMMENT: this is an example of comment
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: STOPTIMING: main 959.523 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: STOPTIMING: main 1061.721 ms
 
-Feb 28, 2019 10:19:57 AM Instrumentation dump
-CONFIG: TOTAL TIME: 959.698 ms
+Feb 28, 2019 1:40:51 PM Instrumentation dump
+CONFIG: TOTAL TIME: 1061.875 ms
 
