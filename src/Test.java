@@ -4,7 +4,7 @@ public class Test {
 		ins.activate(true);
 		ins.startTiming("main");
 		
-		int arraySize = 150;
+		int arraySize = 100;
 		int[] a = populateArray(ins, arraySize);
 
 		int[] bubble = bubbleSort(ins, a);
