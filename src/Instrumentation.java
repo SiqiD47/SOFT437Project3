@@ -64,9 +64,11 @@ public class Instrumentation {
 			SimpleFormatter formatter = new SimpleFormatter();
 			fh.setFormatter(formatter);
 			logger.setLevel(Level.CONFIG);
-			for (int i = 0; i < logContent.size(); i++) {
-				logger.config(logContent.get(i));
-			}
+
+			String log = "";
+			for (int i = 0; i < logContent.size(); i++)
+				log += logContent.get(i);
+			logger.config(log);
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
