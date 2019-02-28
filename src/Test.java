@@ -13,7 +13,7 @@ public class Test {
 		int[] selection = selectionSort(ins, a);
 		ins.comment("this is an example of comment");
 		ins.stopTiming("main");
-		ins.dump("Question3_2 " + arraySize + " numbers.log");
+		ins.dump("Question3_3 " + arraySize + " numbers.log");
 
 	}
 
