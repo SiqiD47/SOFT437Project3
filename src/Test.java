@@ -3,8 +3,9 @@ public class Test {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
 		ins.startTiming("main");
-
-		int[] a = populateArray(ins, 20);
+		
+		int arraySize = 150;
+		int[] a = populateArray(ins, arraySize);
 
 		int[] bubble = bubbleSort(ins, a);
 		int[] quick = quickSort(ins, a);
@@ -13,7 +14,7 @@ public class Test {
 
 		ins.comment("this is an example of comment");
 		ins.stopTiming("main");
-		ins.dump(null);
+		ins.dump("Question3_" + arraySize + " numbers.log");
 
 	}
 

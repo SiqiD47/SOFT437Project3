@@ -1,0 +1,42 @@
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: main
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: populateArray()
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: populateArray() 1263237 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: bubbleSort()
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: bubbleSort() 9313089 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: quickSort()
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: quickSort() 1074821 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: mergeSort()
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: mergeSort() 1073202 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STARTTIMING: selectionSort()
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: selectionSort() 1568211 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: COMMENT: this is an example of comment
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: STOPTIMING: main 14704228 ns
+
+Feb 27, 2019 2:48:16 PM Instrumentation dump
+CONFIG: TOTAL TIME: 14724403 ns
+
