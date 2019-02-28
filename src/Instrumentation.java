@@ -35,7 +35,8 @@ public class Instrumentation {
 	public void stopTiming(String comment) {
 		if (activated) {
 			long end = System.nanoTime();
-			logContent.add("STOPTIMING: " + comment + " " + (float)(end - startTime.pop())/1000000 + " ms\n");
+			String s = String.format("%.3f", (float) (end - startTime.pop()) / 1000000);
+			logContent.add("STOPTIMING: " + comment + " " + s + " ms\n");
 		}
 	}
 
@@ -47,7 +48,8 @@ public class Instrumentation {
 
 	public void dump(String filename) {
 		long current = System.nanoTime();
-		logContent.add("TOTAL TIME: " + (float) (current - startTimeCopy.get(0))/1000000 + " s\n");
+		String s = String.format("%.3f", (float) (current - startTimeCopy.get(0)) / 1000000);
+		logContent.add("TOTAL TIME: " + s + " ms\n");
 
 		Logger logger = Logger.getLogger("MyLog");
 		FileHandler fh;
