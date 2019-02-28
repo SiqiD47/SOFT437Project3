@@ -3,18 +3,17 @@ public class Test {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
 		ins.startTiming("main");
-		
-		int arraySize = 50;
-		int[] a = populateArray(ins, arraySize);
 
+		// question 3.2 under test drive section of the project
+		int arraySize = 10000;
+		int[] a = populateArray(ins, arraySize);
 		int[] bubble = bubbleSort(ins, a);
 		int[] quick = quickSort(ins, a);
 		int[] merge = mergeSort(ins, a);
 		int[] selection = selectionSort(ins, a);
-
 		ins.comment("this is an example of comment");
 		ins.stopTiming("main");
-		ins.dump("Question3_" + arraySize + " numbers.log");
+		ins.dump("Question3_2 " + arraySize + " numbers.log");
 
 	}
 
@@ -59,4 +58,5 @@ public class Test {
 		ins.stopTiming("selectionSort()");
 		return array;
 	}
+
 }
