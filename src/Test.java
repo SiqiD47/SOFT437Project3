@@ -3,17 +3,15 @@ public class Test {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
 		ins.startTiming("main");
-		
-		// question 3.2 under test drive section of the project
-		int arraySize = 10000;
-		int[] a = populateArray(ins, arraySize);
-		int[] bubble = bubbleSort(ins, a);
-		int[] quick = quickSort(ins, a);
-		int[] merge = mergeSort(ins, a);
-		int[] selection = selectionSort(ins, a);
-		ins.comment("this is an example of comment");
+
+		// question 3 and 4 under test drive section of the project
+		ins.comment("===== Question 3 & 4 =====");
+		int[] arraySize = { 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 6000, 8000, 10000 };
+		for (int i = 0; i < arraySize.length; i++)
+			testQuestion3_4(ins, arraySize[i]);
+
 		ins.stopTiming("main");
-		ins.dump("Question3_3 " + arraySize + " numbers.log");
+		ins.dump("TestDriveSec");
 
 	}
 
@@ -57,6 +55,18 @@ public class Test {
 		b.sort(array);
 		ins.stopTiming("selectionSort()");
 		return array;
+	}
+
+	// test method for Question 3 & 4
+	public static void testQuestion3_4(Instrumentation ins, int arraySize) {
+		ins.comment("array size: " + arraySize);
+		ins.startTiming("4SortingAlg");
+		int[] a = populateArray(ins, arraySize);
+		int[] bubble = bubbleSort(ins, a);
+		int[] quick = quickSort(ins, a);
+		int[] merge = mergeSort(ins, a);
+		int[] selection = selectionSort(ins, a);
+		ins.stopTiming("4SortingAlg");
 	}
 
 }

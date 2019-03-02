@@ -33,7 +33,6 @@ public class Instrumentation {
 			for (int i = 1; i < startTime.size(); i++)
 				indentation += "| ";
 			indent.push(indentation);
-
 			logContent.add(indentation + "STARTTIMING: " + comment + "\n");
 
 			if (startTime.size() == 1)

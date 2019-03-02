@@ -1,0 +1,163 @@
+Mar 02, 2019 9:08:51 AM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+COMMENT: ===== Question 3 & 4 =====
+COMMENT: array size: 100
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.580 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 2.710 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 0.602 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.756 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 1.027 ms
+| STOPTIMING: 4SortingAlg 32.197 ms
+COMMENT: array size: 200
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.300 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 2.635 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 0.149 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.484 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 1.906 ms
+| STOPTIMING: 4SortingAlg 6.091 ms
+COMMENT: array size: 300
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.134 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 5.931 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 0.532 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.410 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 4.813 ms
+| STOPTIMING: 4SortingAlg 12.743 ms
+COMMENT: array size: 400
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.085 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 4.706 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 0.859 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.518 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 5.685 ms
+| STOPTIMING: 4SortingAlg 12.699 ms
+COMMENT: array size: 500
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.094 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 11.891 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 1.244 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.716 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 7.662 ms
+| STOPTIMING: 4SortingAlg 22.546 ms
+COMMENT: array size: 1000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.145 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 3.595 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 2.422 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.472 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 13.094 ms
+| STOPTIMING: 4SortingAlg 20.687 ms
+COMMENT: array size: 2000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.333 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 14.629 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 15.997 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 2.134 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 13.618 ms
+| STOPTIMING: 4SortingAlg 47.931 ms
+COMMENT: array size: 3000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.469 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 26.414 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 23.844 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 2.601 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 22.842 ms
+| STOPTIMING: 4SortingAlg 77.927 ms
+COMMENT: array size: 4000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.332 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 49.973 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 43.952 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.540 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 28.013 ms
+| STOPTIMING: 4SortingAlg 123.512 ms
+COMMENT: array size: 6000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.276 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 90.842 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 12.144 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 0.740 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 55.890 ms
+| STOPTIMING: 4SortingAlg 160.484 ms
+COMMENT: array size: 8000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.402 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 152.209 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 21.246 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 1.047 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 110.308 ms
+| STOPTIMING: 4SortingAlg 286.246 ms
+COMMENT: array size: 10000
+| STARTTIMING: 4SortingAlg
+| | STARTTIMING: populateArray()
+| | STOPTIMING: populateArray() 0.819 ms
+| | STARTTIMING: bubbleSort()
+| | STOPTIMING: bubbleSort() 255.740 ms
+| | STARTTIMING: quickSort()
+| | STOPTIMING: quickSort() 40.552 ms
+| | STARTTIMING: mergeSort()
+| | STOPTIMING: mergeSort() 1.755 ms
+| | STARTTIMING: selectionSort()
+| | STOPTIMING: selectionSort() 177.510 ms
+| STOPTIMING: 4SortingAlg 477.141 ms
+STOPTIMING: main 1282.033 ms
+TOTAL TIME: 1282.120 ms
+
