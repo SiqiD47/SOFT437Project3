@@ -1,16 +1,17 @@
-Feb 28, 2019 1:48:29 PM Instrumentation dump
-CONFIG: STARTTIMING: main
-STARTTIMING: populateArray()
-STOPTIMING: populateArray() 4.222 ms
-STARTTIMING: bubbleSort()
-STOPTIMING: bubbleSort() 178.244 ms
-STARTTIMING: quickSort()
-STOPTIMING: quickSort() 95.774 ms
-STARTTIMING: mergeSort()
-STOPTIMING: mergeSort() 7.088 ms
-STARTTIMING: selectionSort()
-STOPTIMING: selectionSort() 219.384 ms
+Mar 02, 2019 8:47:01 AM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+| STARTTIMING: populateArray()
+| STOPTIMING: populateArray() 1.957 ms
+| STARTTIMING: bubbleSort()
+| STOPTIMING: bubbleSort() 138.626 ms
+| STARTTIMING: quickSort()
+| STOPTIMING: quickSort() 78.836 ms
+| STARTTIMING: mergeSort()
+| STOPTIMING: mergeSort() 5.873 ms
+| STARTTIMING: selectionSort()
+| STOPTIMING: selectionSort() 121.882 ms
 COMMENT: this is an example of comment
-STOPTIMING: main 548.672 ms
-TOTAL TIME: 549.118 ms
+STOPTIMING: main 373.709 ms
+TOTAL TIME: 374.019 ms
 

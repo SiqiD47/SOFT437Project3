@@ -3,7 +3,7 @@ public class Test {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
 		ins.startTiming("main");
-
+		
 		// question 3.2 under test drive section of the project
 		int arraySize = 10000;
 		int[] a = populateArray(ins, arraySize);

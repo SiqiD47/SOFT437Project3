@@ -11,6 +11,7 @@ import java.util.logging.SimpleFormatter;
 public class Instrumentation {
 	private Stack<Long> startTime = new Stack<Long>();
 	private long firstStartTime = 0;
+	private Stack<String> indent = new Stack<String>();
 	private ArrayList<String> logContent = new ArrayList<>();
 	private static boolean activated = false;
 
@@ -27,9 +28,16 @@ public class Instrumentation {
 		if (activated) {
 			long time = System.nanoTime();
 			startTime.push(time);
+
+			String indentation = "";
+			for (int i = 1; i < startTime.size(); i++)
+				indentation += "| ";
+			indent.push(indentation);
+
+			logContent.add(indentation + "STARTTIMING: " + comment + "\n");
+
 			if (startTime.size() == 1)
 				firstStartTime = startTime.get(0);
-			logContent.add("STARTTIMING: " + comment + "\n");
 		}
 	}
 
@@ -37,7 +45,7 @@ public class Instrumentation {
 		if (activated) {
 			long end = System.nanoTime();
 			String s = String.format("%.3f", (float) (end - startTime.pop()) / 1000000);
-			logContent.add("STOPTIMING: " + comment + " " + s + " ms\n");
+			logContent.add(indent.pop() + "STOPTIMING: " + comment + " " + s + " ms\n");
 		}
 	}
 
@@ -65,7 +73,7 @@ public class Instrumentation {
 			fh.setFormatter(formatter);
 			logger.setLevel(Level.CONFIG);
 
-			String log = "";
+			String log = "\n";
 			for (int i = 0; i < logContent.size(); i++)
 				log += logContent.get(i);
 			logger.config(log);
