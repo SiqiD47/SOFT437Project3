@@ -8,8 +8,8 @@ public class Test {
 		ins.comment("===== Question 3 & 4 =====");
 		int[] arraySize = { 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 6000, 8000, 10000 };
 		for (int i = 0; i < arraySize.length; i++)
-			testQuestion3_4(ins, arraySize[i]);
-
+			fourSortingAlgs(ins, arraySize[i]);
+		
 		ins.stopTiming("main");
 		ins.dump("TestDriveSec");
 
@@ -58,15 +58,15 @@ public class Test {
 	}
 
 	// test method for Question 3 & 4
-	public static void testQuestion3_4(Instrumentation ins, int arraySize) {
+	public static void fourSortingAlgs(Instrumentation ins, int arraySize) {
 		ins.comment("array size: " + arraySize);
-		ins.startTiming("4SortingAlg");
+		ins.startTiming("fourSortingAlgs()");
 		int[] a = populateArray(ins, arraySize);
 		int[] bubble = bubbleSort(ins, a);
 		int[] quick = quickSort(ins, a);
 		int[] merge = mergeSort(ins, a);
 		int[] selection = selectionSort(ins, a);
-		ins.stopTiming("4SortingAlg");
+		ins.stopTiming("fourSortingAlgs()");
 	}
 
 }
