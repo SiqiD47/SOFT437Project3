@@ -1,42 +1,67 @@
-Mar 03, 2019 8:53:21 PM Instrumentation dump
+Mar 03, 2019 8:53:48 PM Instrumentation dump
 CONFIG: 
 STARTTIMING: main
 | STARTTIMING: loop
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.379 ms
+| | STOPTIMING: doSomething() 0.938 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.108 ms
+| | STOPTIMING: doSomething() 0.096 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.289 ms
+| | STOPTIMING: doSomething() 0.141 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.149 ms
+| | STOPTIMING: doSomething() 0.172 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.087 ms
-| STOPTIMING: loop 59.382 ms
+| | STOPTIMING: doSomething() 0.069 ms
+| STOPTIMING: loop 57.684 ms
 COMMENT: this is an example of a comment!
-STOPTIMING: main 59.697 ms
+STOPTIMING: main 58.360 ms
 STARTTIMING: With Instruemenation
-TOTAL TIME: 3.616 ms
+TOTAL TIME: 1.814 ms
 
-Mar 03, 2019 8:53:21 PM Instrumentation dump
+Mar 03, 2019 8:53:48 PM Instrumentation dump
 CONFIG: 
 STARTTIMING: main
 | STARTTIMING: loop
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.379 ms
+| | STOPTIMING: doSomething() 0.938 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.108 ms
+| | STOPTIMING: doSomething() 0.096 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.289 ms
+| | STOPTIMING: doSomething() 0.141 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.149 ms
+| | STOPTIMING: doSomething() 0.172 ms
 | | STARTTIMING: doSomething()
-| | STOPTIMING: doSomething() 0.087 ms
-| STOPTIMING: loop 59.382 ms
+| | STOPTIMING: doSomething() 0.069 ms
+| STOPTIMING: loop 57.684 ms
 COMMENT: this is an example of a comment!
-STOPTIMING: main 59.697 ms
+STOPTIMING: main 58.360 ms
 STARTTIMING: With Instruemenation
-TOTAL TIME: 3.616 ms
-STOPTIMING: With Instruemenation 119.814 ms
-TOTAL TIME: 121.033 ms
+TOTAL TIME: 1.814 ms
+STOPTIMING: With Instruemenation 64.806 ms
+TOTAL TIME: 64.989 ms
+
+Mar 03, 2019 8:53:48 PM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+| STARTTIMING: loop
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.938 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.096 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.141 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.172 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.069 ms
+| STOPTIMING: loop 57.684 ms
+COMMENT: this is an example of a comment!
+STOPTIMING: main 58.360 ms
+STARTTIMING: With Instruemenation
+TOTAL TIME: 1.814 ms
+STOPTIMING: With Instruemenation 64.806 ms
+TOTAL TIME: 64.989 ms
+STARTTIMING: Without instrumentation
+STOPTIMING: Without instrumentation 1.348 ms
+TOTAL TIME: 1.583 ms
 

@@ -44,5 +44,7 @@ public class TestOverhead {
 		ins.activate(true);
 		ins.stopTiming("With Instruemenation");
 		ins.dump("overhead.log");
+
+		overhead(true);
 	}
 }
