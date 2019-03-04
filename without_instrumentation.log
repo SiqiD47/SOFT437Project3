@@ -1,0 +1,67 @@
+Mar 03, 2019 8:49:04 PM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+| STARTTIMING: loop
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.216 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.065 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.050 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.052 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.047 ms
+| STOPTIMING: loop 31.985 ms
+COMMENT: this is an example of a comment!
+STOPTIMING: main 32.263 ms
+STARTTIMING: With Instruemenation
+TOTAL TIME: 1.993 ms
+
+Mar 03, 2019 8:49:04 PM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+| STARTTIMING: loop
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.216 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.065 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.050 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.052 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.047 ms
+| STOPTIMING: loop 31.985 ms
+COMMENT: this is an example of a comment!
+STOPTIMING: main 32.263 ms
+STARTTIMING: With Instruemenation
+TOTAL TIME: 1.993 ms
+STOPTIMING: With Instruemenation 101.734 ms
+TOTAL TIME: 101.942 ms
+
+Mar 03, 2019 8:49:04 PM Instrumentation dump
+CONFIG: 
+STARTTIMING: main
+| STARTTIMING: loop
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.216 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.065 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.050 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.052 ms
+| | STARTTIMING: doSomething()
+| | STOPTIMING: doSomething() 0.047 ms
+| STOPTIMING: loop 31.985 ms
+COMMENT: this is an example of a comment!
+STOPTIMING: main 32.263 ms
+STARTTIMING: With Instruemenation
+TOTAL TIME: 1.993 ms
+STOPTIMING: With Instruemenation 101.734 ms
+TOTAL TIME: 101.942 ms
+STARTTIMING: Without instrumentation
+STOPTIMING: Without instrumentation 2.461 ms
+TOTAL TIME: 2.722 ms
+
