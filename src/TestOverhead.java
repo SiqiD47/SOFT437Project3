@@ -25,7 +25,6 @@ public class TestOverhead {
 		ins.stopTiming("With instruemenation");
 		ins.dump("with_instrumentation.log");
 		
-		//ins = Instrumentation.Instance();
 		overhead(true);
 	}
 }
