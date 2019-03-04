@@ -1,13 +1,5 @@
 
 public class TestOverhead {
-	public static void doSomething() {
-		Instrumentation ins = Instrumentation.Instance();
-		ins.activate(true);
-		ins.startTiming("doSomething()");
-		System.out.println("Hi there!");
-		ins.stopTiming("doSomething()");
-	}
-
 	public static void overhead(boolean activate) {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(activate);
@@ -24,27 +16,16 @@ public class TestOverhead {
 
 	public static void main(String[] args) {
 		Instrumentation ins = Instrumentation.Instance();
-		ins.activate(true);
-
-		ins.startTiming("main");
-		ins.startTiming("loop");
-
-		for (int i = 0; i < 5; i++) {
-			doSomething();
-		}
-
-		ins.stopTiming("loop");
-		ins.comment("this is an example of a comment!");
-		ins.stopTiming("main");
 
 		// measure the instrumentation overhead
 		ins.activate(true);
-		ins.startTiming("With Instruemenation");
+		ins.startTiming("With instruemenation");
 		overhead(false);
 		ins.activate(true);
-		ins.stopTiming("With Instruemenation");
-		ins.dump("overhead.log");
-
+		ins.stopTiming("With instruemenation");
+		ins.dump("with_instrumentation.log");
+		
+		//ins = Instrumentation.Instance();
 		overhead(true);
 	}
 }

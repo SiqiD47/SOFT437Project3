@@ -19,7 +19,7 @@ public class Instrumentation {
 	private ArrayList<String> logContent = new ArrayList<>();
 	private static boolean activated = false;
 	private static boolean testOverhead = false; // if set to true: test
-												// instrumentation overhead
+													// instrumentation overhead
 
 	private static Instrumentation instance = new Instrumentation();
 
@@ -63,31 +63,33 @@ public class Instrumentation {
 	}
 
 	public void dump(String filename) {
-		long current = System.nanoTime();
-		String s = String.format("%.3f", (float) (current - firstStartTime) / 1000000);
-		logContent.add("TOTAL TIME: " + s + " ms\n");
+		if (activated) {
+			long current = System.nanoTime();
+			String s = String.format("%.3f", (float) (current - firstStartTime) / 1000000);
+			logContent.add("TOTAL TIME: " + s + " ms\n");
 
-		Logger logger = Logger.getLogger("MyLog");
-		FileHandler fh;
-		try {
-			if (filename == null) {
-				SimpleDateFormat f = new SimpleDateFormat("yyMMddHHmmss");
-				filename = f.format(new Date()) + ".log";
+			Logger logger = Logger.getLogger("MyLog");
+			FileHandler fh;
+			try {
+				if (filename == null) {
+					SimpleDateFormat f = new SimpleDateFormat("yyMMddHHmmss");
+					filename = f.format(new Date()) + ".log";
+				}
+				fh = new FileHandler(filename);
+				logger.addHandler(fh);
+				SimpleFormatter formatter = new SimpleFormatter();
+				fh.setFormatter(formatter);
+				logger.setLevel(Level.CONFIG);
+
+				String log = "\n";
+				for (int i = 0; i < logContent.size(); i++)
+					log += logContent.get(i);
+				logger.config(log);
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			fh = new FileHandler(filename);
-			logger.addHandler(fh);
-			SimpleFormatter formatter = new SimpleFormatter();
-			fh.setFormatter(formatter);
-			logger.setLevel(Level.CONFIG);
-
-			String log = "\n";
-			for (int i = 0; i < logContent.size(); i++)
-				log += logContent.get(i);
-			logger.config(log);
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 
