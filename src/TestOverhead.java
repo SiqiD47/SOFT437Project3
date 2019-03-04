@@ -1,17 +1,12 @@
 
 public class TestOverhead {
-	public static void overhead(boolean activate) {
+	public static void overhead() {
 		Instrumentation ins = Instrumentation.Instance();
-		ins.activate(activate);
-		ins.startTiming("Without instrumentation");
-		int j = 0;
-		for (int i = 0; i < 100000; i++) {
-			if (i > 0) {
-				j += i;
-			}
+		ins.activate(true);
+		for (int i = 0; i < 10000; i++) {
+			ins.startTiming("instrumentation inside loop");
+			ins.stopTiming("instrumentation inside loop");
 		}
-		ins.stopTiming("Without instrumentation");
-		ins.dump("without_instrumentation.log");
 	}
 
 	public static void main(String[] args) {
@@ -19,12 +14,9 @@ public class TestOverhead {
 
 		// measure the instrumentation overhead
 		ins.activate(true);
-		ins.startTiming("With instruemenation");
-		overhead(false);
-		ins.activate(true);
-		ins.stopTiming("With instruemenation");
+		ins.startTiming("instruemenation outside loop");
+		overhead();
+		ins.stopTiming("instruemenation outside loop");
 		ins.dump("with_instrumentation.log");
-		
-		overhead(true);
 	}
 }

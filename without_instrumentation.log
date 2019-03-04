@@ -1,9 +1,0 @@
-Mar 03, 2019 9:12:54 PM Instrumentation dump
-CONFIG: 
-STARTTIMING: With instruemenation
-STOPTIMING: With instruemenation 1.898 ms
-TOTAL TIME: 26.668 ms
-STARTTIMING: Without instrumentation
-STOPTIMING: Without instrumentation 0.700 ms
-TOTAL TIME: 0.924 ms
-
