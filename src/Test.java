@@ -9,7 +9,6 @@ public class Test {
 
 		for (int i = 0; i < arraySize.length; i++)
 			fourSortingAlgs(ins, arraySize[i]);
-
 		ins.stopTiming("main");
 		ins.dump("TestDriveSec");
 	}
@@ -94,10 +93,10 @@ public class Test {
 			int[] a7 = a5.clone();
 			int[] a8 = a5.clone();
 			ins.startTiming("test with instrumented classes");
-			bubbleSort(ins, a5, true);
-			quickSort(ins, a6, true);
-			mergeSort(ins, a7, true);
-			selectionSort(ins, a8, true);
+//			bubbleSort(ins, a5, true);
+//			quickSort(ins, a6, true);
+//			mergeSort(ins, a7, true);
+//			selectionSort(ins, a8, true);
 			ins.stopTiming("test with instrumented classes");
 		}
 

@@ -7,6 +7,10 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import java.lang.management.ManagementFactory;
+import java.lang.management.OperatingSystemMXBean;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 public class Instrumentation {
 	private Stack<Long> startTime = new Stack<Long>();
@@ -14,6 +18,8 @@ public class Instrumentation {
 	private Stack<String> indent = new Stack<String>();
 	private ArrayList<String> logContent = new ArrayList<>();
 	private static boolean activated = false;
+	private static boolean testOverhead = false; // if set to true: test
+												// instrumentation overhead
 
 	private static Instrumentation instance = new Instrumentation();
 
@@ -38,6 +44,7 @@ public class Instrumentation {
 			if (startTime.size() == 1)
 				firstStartTime = startTime.get(0);
 		}
+		overhead("startTiming():", testOverhead);
 	}
 
 	public void stopTiming(String comment) {
@@ -46,6 +53,7 @@ public class Instrumentation {
 			String s = String.format("%.3f", (float) (end - startTime.pop()) / 1000000);
 			logContent.add(indent.pop() + "STOPTIMING: " + comment + " " + s + " ms\n");
 		}
+		overhead("endTiming(): ", testOverhead);
 	}
 
 	public void comment(String comment) {
@@ -85,5 +93,25 @@ public class Instrumentation {
 
 	public void activate(boolean onoff) {
 		activated = onoff;
+	}
+
+	public void overhead(String s, boolean tested) {
+		if (tested) {
+			OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
+			System.out.println(s);
+			for (Method method : operatingSystemMXBean.getClass().getDeclaredMethods()) {
+				method.setAccessible(true);
+				if (method.getName().startsWith("get") && Modifier.isPublic(method.getModifiers())) {
+					Object value;
+					try {
+						value = method.invoke(operatingSystemMXBean);
+					} catch (Exception e) {
+						value = e;
+					}
+					System.out.println("     " + method.getName() + " = " + value);
+				}
+			}
+			System.out.println();
+		}
 	}
 }
