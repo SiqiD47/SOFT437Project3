@@ -44,7 +44,6 @@ public class Instrumentation {
 			if (startTime.size() == 1)
 				firstStartTime = startTime.get(0);
 		}
-		overhead("startTiming():", testOverhead);
 	}
 
 	public void stopTiming(String comment) {
@@ -53,7 +52,6 @@ public class Instrumentation {
 			String s = String.format("%.3f", (float) (end - startTime.pop()) / 1000000);
 			logContent.add(indent.pop() + "STOPTIMING: " + comment + " " + s + " ms\n");
 		}
-		overhead("endTiming(): ", testOverhead);
 	}
 
 	public void comment(String comment) {
@@ -95,25 +93,5 @@ public class Instrumentation {
 
 	public void activate(boolean onoff) {
 		activated = onoff;
-	}
-
-	public void overhead(String s, boolean tested) {
-		if (tested) {
-			OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
-			System.out.println(s);
-			for (Method method : operatingSystemMXBean.getClass().getDeclaredMethods()) {
-				method.setAccessible(true);
-				if (method.getName().startsWith("get") && Modifier.isPublic(method.getModifiers())) {
-					Object value;
-					try {
-						value = method.invoke(operatingSystemMXBean);
-					} catch (Exception e) {
-						value = e;
-					}
-					System.out.println("     " + method.getName() + " = " + value);
-				}
-			}
-			System.out.println();
-		}
 	}
 }

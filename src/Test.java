@@ -3,8 +3,7 @@ public class Test {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
 		ins.startTiming("main");
-		// question 3 and 4 under test drive section of the project
-		ins.comment("===== Question 3 & 4 =====");
+
 		int[] arraySize = { 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 6000, 8000, 10000 };
 
 		for (int i = 0; i < arraySize.length; i++)
